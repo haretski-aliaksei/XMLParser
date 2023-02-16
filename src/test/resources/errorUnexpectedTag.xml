@@ -1,0 +1,62 @@
+<contacts
+    <contact type="colleagues">
+        <name>Eric Anderson</name>
+        <phone>7(78)675-88-21</phone>
+        <email>zeheilluxova-7442@yopmail.com</email>
+        <position>QA Engineer</position>
+    </contact>
+    <contact type="colleagues">
+        <name>John Nelson</name>
+        <phone>1(995)060-76-88</phone>
+        <email>mogoulouxefroi-3518@yopmail.com</email>
+        <position>Frontend developer</position>
+    </contact>
+    <contact type="colleagues">
+        <name>Kevin Brown</name>
+        <phone>813(17)070-70-92</phone>
+        <email>jewunegrefrau-8750@yopmail.com</email>
+        <position>Frontend developer</position>
+    </contact>
+    <contact type="colleagues">
+        <name>Maria Saunders</name>
+        <phone>40(065)036-09-18</phone>
+        <email>creuseujaquepreu-1593@yopmail.com</email>
+        <position>UI/UX Designer</position>
+    </contact>
+    <contact type="colleagues">
+        <name>Bobbie Thompson</name>
+        <phone>6(769)602-02-16</phone>
+        <email>treyehaveddi-4407@yopmail.com</email>
+        <position>Backend developer</position>
+    </contact>
+    <contact type="family">
+        <name>Scott Rodriguez</name>
+        <phone>6(8325)557-28-75</phone>
+        <email>gubressaddese-7595@yopmail.com</email>
+        <type>Husband</type>
+    </contact>
+    <contact type="family">
+        <name>Helen Johnson</name>
+        <phone>51(921)376-32-10</phone>
+        <email>dejallature-4095@yopmail.com</email>
+        <type>Mother</type>
+    </contact>
+    <contact type="family">
+        <name>Tyler Boone</name>
+        <phone>3(7271)361-84-36</phone>
+        <email>doffouvefratta-9431@yopmail.com</email>
+        <type>Father</type>
+    </contact>
+    <contact type="family">
+        <name>Barbara Rose</name>
+        <phone>3(7271)361-84-36</phone>
+        <email>doffouvefratta-9431@yopmail.com</email>
+        <type>Daughter</type>
+    </contact>
+    <contact type="family">
+        <name>Barbara Rose</name>
+        <phone>2(75)020-48-98</phone>
+        <email>greuffumakeihe-3464@yopmail.com</email>
+        <type>Son</type>
+    </contact>
+</contacts>
