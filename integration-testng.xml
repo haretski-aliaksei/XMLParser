@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="ParserSuite" verbose="1" >
+    <test name="test for parser" >
+        <groups>
+            <run>
+                <include name="validationTests"/>
+                <include name="simpleTests"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="parser.ParserTests"/>
+            <class name="parser.FoundBugsInTests"/>
+        </classes>
+    </test>
+</suite>
