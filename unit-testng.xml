@@ -1,19 +1,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="CollectionsSuite" verbose="1" >
-    <test name="test for array list" >
+<suite name="CollectionsSuite" verbose="1">
+    <test name="Test for array list">
         <classes>
-            <class name="collections.MyArrayListTest" />
+            <class name="collections.MyArrayListTest"/>
         </classes>
     </test>
-    <test name="test for stack">
+    <test name="Test for stack">
         <classes>
             <class name="collections.MyStackTest"/>
         </classes>
     </test>
-    <test name="test for exceptions" >
+    <test name="Test for exceptions">
         <classes>
-            <class name="collections.ExpectedExceptionTests" />
+            <class name="collections.ExpectedExceptionTests"/>
         </classes>
     </test>
 </suite>
