@@ -1,6 +1,6 @@
 package parser;
 
-import Helpers.TextHelpers;
+import helpers.TextHelpers;
 import org.testng.annotations.Test;
 import org.testng.asserts.Assertion;
 import utilities.Iterator;
