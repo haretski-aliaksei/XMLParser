@@ -62,9 +62,9 @@ public class MyArrayListTest {
         arrayList.add("1");
         arrayList.add("2");
         arrayList.add(0, "3");
-        softly.assertEquals(arrayList.get(0),"3");
-        softly.assertEquals(arrayList.get(1),"1");
-        softly.assertEquals(arrayList.get(2),"2");
+        softly.assertEquals(arrayList.get(0), "3");
+        softly.assertEquals(arrayList.get(1), "1");
+        softly.assertEquals(arrayList.get(2), "2");
         softly.assertAll();
     }
 
@@ -73,7 +73,7 @@ public class MyArrayListTest {
         testingArray.add(1);
         testingArray.add(2);
         testingArray.add(3);
-        assertEquals(testingArray.toArray().length,3);
+        assertEquals(testingArray.toArray().length, 3);
     }
 
     @Test
