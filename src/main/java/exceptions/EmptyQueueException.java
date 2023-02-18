@@ -1,4 +1,6 @@
-package exceptions;public class EmptyQueueException extends RuntimeException{
+package exceptions;
+
+public class EmptyQueueException extends RuntimeException {
 
     /**
      * Constructs a new <code>EmptyStackException</code> with <tt>null</tt>

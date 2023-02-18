@@ -1,11 +1,8 @@
 package utilities;
 
 public class MyDLLNode<E> {
-
     private E value;
-
     private MyDLLNode<E> prev;
-
     private MyDLLNode<E> next;
 
     public MyDLLNode(E value) {

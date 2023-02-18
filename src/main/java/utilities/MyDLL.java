@@ -5,12 +5,10 @@ import java.util.NoSuchElementException;
 public class MyDLL<E> implements ListADT<E> {
 
     /**
-	 * generated serial ID
-	 */
-	private static final long serialVersionUID = 5077956809119040791L;
-
-	private MyDLLNode<E> first;
-
+     * generated serial ID
+     */
+    private static final long serialVersionUID = 5077956809119040791L;
+    private MyDLLNode<E> first;
     private MyDLLNode<E> last;
 
     public MyDLL() {
@@ -24,7 +22,7 @@ public class MyDLL<E> implements ListADT<E> {
     }
 
     @SuppressWarnings("unchecked")
-	@Override
+    @Override
     public E[] toArray(E[] toHold) throws NullPointerException {
         if (toHold == null) {
             throw new NullPointerException();
@@ -32,7 +30,7 @@ public class MyDLL<E> implements ListADT<E> {
         int size = size();
         MyDLLNode<E> cursor = first;
         Object[] result = (toHold.length >= size) ? toHold : new Object[size];
-        int i=0;
+        int i = 0;
         while (cursor != null) {
             result[i] = cursor.getValue();
             i++;
@@ -77,7 +75,7 @@ public class MyDLL<E> implements ListADT<E> {
         @Override
         public E next() throws NoSuchElementException {
             if (!hasNext()) {
-                throw  new NoSuchElementException();
+                throw new NoSuchElementException();
             }
             MyDLLNode<E> result = cursor;
             cursor = cursor.getNext();
@@ -90,7 +88,7 @@ public class MyDLL<E> implements ListADT<E> {
         int size = size();
         Object[] result = new Object[size];
         MyDLLNode<E> node = first;
-        int index=0;
+        int index = 0;
         while (node != null) {
             result[index] = node.getValue();
             node = node.getNext();
@@ -155,7 +153,7 @@ public class MyDLL<E> implements ListADT<E> {
     public void clear() {
         MyDLLNode<E> cursor = first;
         if (cursor != null) {
-            cursor =cursor.getNext();
+            cursor = cursor.getNext();
         }
         while (cursor != null) {
             cursor.getPrev().setNext(null);
@@ -165,7 +163,6 @@ public class MyDLL<E> implements ListADT<E> {
         first = null;
         last = null;
     }
-
 
     @Override
     public int size() {
@@ -191,11 +188,11 @@ public class MyDLL<E> implements ListADT<E> {
         }
         int position = 0;
         MyDLLNode<E> cursor = first;
-        while (position<index && cursor != null) {
+        while (position < index && cursor != null) {
             cursor = cursor.getNext();
             position++;
         }
-        if (position<index) {
+        if (position < index) {
             throw new IndexOutOfBoundsException();
         }
         if (cursor == null) {
@@ -215,7 +212,7 @@ public class MyDLL<E> implements ListADT<E> {
         }
         int position = 0;
         MyDLLNode<E> cursor = first;
-        while (position<index && cursor != null) {
+        while (position < index && cursor != null) {
             cursor = cursor.getNext();
             position++;
         }
@@ -232,7 +229,7 @@ public class MyDLL<E> implements ListADT<E> {
         }
         int position = 0;
         MyDLLNode<E> cursor = first;
-        while (position<index && cursor != null) {
+        while (position < index && cursor != null) {
             cursor = cursor.getNext();
             position++;
         }
@@ -241,7 +238,7 @@ public class MyDLL<E> implements ListADT<E> {
         }
         if (cursor.getPrev() != null) {
             cursor.getPrev().setNext(cursor.getNext());
-        }  else {
+        } else {
             first = first.getNext();
         }
         if (cursor.getNext() != null) {
@@ -262,7 +259,7 @@ public class MyDLL<E> implements ListADT<E> {
         }
         int position = 0;
         MyDLLNode<E> cursor = first;
-        while (position<index && cursor != null) {
+        while (position < index && cursor != null) {
             cursor = cursor.getNext();
             position++;
         }
@@ -273,5 +270,4 @@ public class MyDLL<E> implements ListADT<E> {
         cursor.setValue(toChange);
         return oldValue;
     }
-
 }

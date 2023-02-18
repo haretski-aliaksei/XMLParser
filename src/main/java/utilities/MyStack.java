@@ -3,19 +3,15 @@ package utilities;
 import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 
-public class MyStack<E> implements StackADT<E>{
+public class MyStack<E> implements StackADT<E> {
 
     /**
-	 * generated serial id
-	 */
-	private static final long serialVersionUID = 8388386049414198490L;
-
-	private MyArrayList<E> elements;
-
+     * generated serial id
+     */
+    private static final long serialVersionUID = 8388386049414198490L;
+    private MyArrayList<E> elements;
     private int top;
-
     private static final int DEFAULT_CAPACITY = 100;
-
     private int capacity;
 
     public MyStack() {
@@ -36,7 +32,7 @@ public class MyStack<E> implements StackADT<E>{
     @Override
     public E pop() throws EmptyStackException {
         if (isEmpty()) {
-            throw  new EmptyStackException();
+            throw new EmptyStackException();
         }
         return elements.remove(top--);
     }
@@ -44,7 +40,7 @@ public class MyStack<E> implements StackADT<E>{
     @Override
     public E peek() throws EmptyStackException {
         if (isEmpty()) {
-            throw  new EmptyStackException();
+            throw new EmptyStackException();
         }
         return elements.get(top);
     }
@@ -63,45 +59,45 @@ public class MyStack<E> implements StackADT<E>{
     @Override
     public Object[] toArray() {
         Object[] copy = new Object[size()];
-        for (int i=0; i< copy.length; i++) {
-            copy[i] = elements.get(top-i);
+        for (int i = 0; i < copy.length; i++) {
+            copy[i] = elements.get(top - i);
         }
         return copy;
     }
 
     @SuppressWarnings("unchecked")
-	@Override
+    @Override
     public E[] toArray(E[] holder) throws NullPointerException {
         if (holder == null) {
             throw new NullPointerException();
         }
-        Object[] result = holder.length >= top+1 ? holder : new Object[top+1];
-        for (int i=0; i< size(); i++) {
-            result[i] = elements.get(top-i);
+        Object[] result = holder.length >= top + 1 ? holder : new Object[top + 1];
+        for (int i = 0; i < size(); i++) {
+            result[i] = elements.get(top - i);
         }
         return (E[]) result;
     }
 
     @Override
     public boolean contains(E toFind) throws NullPointerException {
-        int i=0;
+        int i = 0;
         if (toFind == null) {
             throw new NullPointerException();
         }
         while (i <= top && !toFind.equals(elements.get(i))) {
-                i++;
-            }
+            i++;
+        }
         return i <= top;
     }
 
     @Override
     public int search(E toFind) {
         int pointer = top;
-        while (pointer>=0 && !elements.get(pointer).equals(toFind)) {
+        while (pointer >= 0 && !elements.get(pointer).equals(toFind)) {
             pointer--;
         }
-        if (pointer>=0) {
-            pointer=top-pointer+1;
+        if (pointer >= 0) {
+            pointer = top - pointer + 1;
         }
         return pointer;
     }
@@ -118,7 +114,7 @@ public class MyStack<E> implements StackADT<E>{
             return false;
         }
         int i = top;
-        while (comparingStackIterator.hasNext() ) {
+        while (comparingStackIterator.hasNext()) {
             if (!elements.get(i).equals(comparingStackIterator.next())) {
                 return false;
             }
@@ -129,11 +125,10 @@ public class MyStack<E> implements StackADT<E>{
 
     @Override
     public int size() {
-        return top+1;
+        return top + 1;
     }
 
     private class Iter<E> implements Iterator<E> {
-
         private int cursor;
 
         public Iter() {
@@ -142,13 +137,13 @@ public class MyStack<E> implements StackADT<E>{
 
         @Override
         public boolean hasNext() {
-            return cursor>=0;
+            return cursor >= 0;
         }
 
         @SuppressWarnings("unchecked")
-		@Override
+        @Override
         public E next() throws NoSuchElementException {
-            if (cursor<0) {
+            if (cursor < 0) {
                 throw new NoSuchElementException();
             }
             E elem = (E) elements.get(cursor);

@@ -5,14 +5,11 @@ import exceptions.EmptyQueueException;
 import java.util.NoSuchElementException;
 
 public class MyQueue<E> implements QueueADT<E> {
-
     /**
 	 * generated serial ID
 	 */
 	private static final long serialVersionUID = 2910584692223232608L;
-
 	private MyDLL<E> elements;
-
     private int count;
 
     public MyQueue() {

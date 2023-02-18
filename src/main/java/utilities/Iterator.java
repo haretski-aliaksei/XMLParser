@@ -24,7 +24,6 @@ public interface Iterator<E> {
      */
     public boolean hasNext();
 
-
     /**
      * Returns the next element in the iteration.
      *
